@@ -13,7 +13,7 @@ export class Haiku{
     this.letters = {
       y: "y",
       vowels: ["a", "e", "i", "o", "u"],
-      exceptions: ["recipe", "catastrophe"]
+      exceptions: ["recipe", "catastrophe", "resume", "toupee", "puree", "recipe", "catastrophe", "apostrophe", "acme", "acne", "ante", "boise", "maybe", "possee", "adobe", "apache", "karate", "peyote", "reveille", "sesame", "shoshone", "syncope", "vigilante", "hyperbole", "coyote"]
     }
     this.lineResult = 0;
 
@@ -21,7 +21,6 @@ export class Haiku{
 
   }
   vowelsCounter(line) {
-    this.lineResult = 0;
     for (let i = 0; i < this.line1.length; i++){
       for (let k = 0; k < this.line1[i].length; k++) {
         if(this.letters.vowels.includes(this.line1[i][k])){
@@ -32,7 +31,12 @@ export class Haiku{
   }
 
   endswithE(line){
-    
+    for (let i = 0; i < line.length; i++) {
+      if (this.letters.exceptions.includes(line[i])) {
+        this.lineResult + 0
+      }
+
+    }
   }
   if (this.letters.exceptions.includes(this.line1[i])){
 
