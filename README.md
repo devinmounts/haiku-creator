@@ -20,7 +20,7 @@ A web app that allows a user to create a haiku and checks the syllables of the e
 
 ## Specs
 1. Program allows a user to enter three strings, of 3, 5 and 3 syllables.
-1. Program splits each string into words.
+1. Program changes string to array and splits each string into words.
 1. Program counts all vowels each word.
 1. Program removes all silent vowels.
 1. Program removes one vowel from any diphthong.
