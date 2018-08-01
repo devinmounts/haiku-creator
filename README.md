@@ -22,9 +22,9 @@ A web app that allows a user to create a haiku and checks the syllables of the e
 1. Program allows a user to enter three strings, of 3, 5 and 3 syllables.
 1. Program changes string to array and splits each string into words.
 1. Program counts all vowels each word.
-1. Program removes all silent vowels.
-1. Program removes one vowel from any diphthong.
-1. Program counts number of vowels remaining, as equivalent to number of syllables, and confirms whether string is a valid haiku.
+1. Program subtracts the value of one for each silent vowels.
+1. Program subtracts the value of one from any diphthong.
+1. Program returns the number of syllables given the number of vowels minus edge cases, and confirms whether string is a valid haiku.
 
 ## Contribution Requirements
 

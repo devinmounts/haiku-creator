@@ -13,8 +13,17 @@ describe('Haiku', function() {
     expect(reusableHaiku.line3).toEqual(["I", "smile", "and", "walk", "on"]);
   });
 
-  it('should test countVowels() method returns number of vowels', function() {
-    newHaiku = new Haiku("the three of us");
-    expect(newHaiku.countVowels()).toEqual(4);
+  it('should test countVowelsLine1() method returns number of vowels', function() {
+    reusableHaiku.countVowelsLine1();
+    expect(reusableHaiku.line1Result).toEqual(6);
+  });
+  it('should test countVowelsLine2() method returns number of vowels', function() {
+    reusableHaiku.countVowelsLine2();
+    expect(reusableHaiku.line2Result).toEqual(8);
+  });
+
+  it('should test countVowelsLine3() method returns number of vowels', function() {
+    reusableHaiku.countVowelsLine3();
+    expect(reusableHaiku.line3Result).toEqual(5);
   });
 });
