@@ -37,10 +37,18 @@ describe('Haiku', function() {
     expect(reusableHaiku.lineResult).toEqual(6);
   });
 
-  it('should test endswithY() method updates lineResult for words ending in y', function() {
-    reusableHaiku.vowelsCounter(reusableHaiku.line2);
-    reusableHaiku.endswithE(reusableHaiku.line2);
-    reusableHaiku.phthongCheck(reusableHaiku.line2);
-    expect(reusableHaiku.lineResult).toEqual(6);
+  it('should test containsY() method updates lineResult for words containing in y', function() {
+    let yHaiku = new Haiku("yuppy gymnasium", "wow", "wow");
+    yHaiku.containsY(yHaiku.line1);
+    expect(yHaiku.lineResult).toEqual(1);
+  });
+
+  it('should test endsWithY() method updates lineResult for words ending in y', function() {
+    let yHaiku = new Haiku("yuppy gymnasium", "wow", "wow")
+    // yHaiku.vowelsCounter(yHaiku.line1);
+    // yHaiku.endswithE(yHaiku.line1);
+    // yHaiku.phthongCheck(yHaiku.line1);
+    yHaiku.endsWithY(yHaiku.line1);
+    expect(yHaiku.lineResult).toEqual(1);
   });
 });

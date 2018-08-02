@@ -10,10 +10,10 @@ export class Haiku{
       diphthongs: ["ee", "ai", "ay", "ea", "ie", "ei", "oo", "ou", "oe", "ue", "ey", "ay", "oy", "oi", "au"]
     }
     this.lineResult = 0;
-
-
-
   }
+
+  syll
+
   vowelsCounter(line) {
     for (let i = 0; i < line.length; i++){
       for (let k = 0; k < line[i].length; k++) {
@@ -52,22 +52,28 @@ export class Haiku{
     }
   }
 
-  containsY(line){
+  containsY(line) {
     for ( let i = 0; i < line.length; i++) {
       let k=0;
       while(k < line[i].length){
-        if ((this.line[i].endsWith("y")) && (!this.letters.vowels.includes(line[i][k-1]))){
-          this.lineResult ++
-        }
-        if ((this.letters.y.includes(line[i][0])) && (!this.letters.vowels.includes(line[i][k+1]))) {
+        if ((this.letters.y.includes(line[i][k])) && (line[i][k] !== line[i][k === 0]) && (line[i][k] !== line[i][line[i].length-1])) {
           this.lineResult++;
           k+=1;
-        } else if ((this.letters.y.includes(line[i])))
-
-        else {
+        } else {
           k+=1;
         }
       }
     }
   }
+
+  endsWithY(line) {
+    for (let i = 0; i < line.length; i++){
+      for (let k = 0; k < line[i].length; k++) {
+        if((line[i].endsWith("y")) && (this.letters.vowels.includes(line[i][k-1]))){
+          this.lineResult++;
+        }
+      }
+    }
+  }
+
 }
