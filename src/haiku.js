@@ -36,7 +36,6 @@ export class Haiku{
     for ( let i = 0; i < line.length; i++) {
       if(line[i].length > 3){
         let k=0;
-        let i=0;
         while(k < line[i].length){
           if ((this.letters.vowels.includes(line[i][k])) && (this.letters.vowels.includes(line[i][k+1])) && (this.letters.vowels.includes(line[i][k+2]))) {
             this.lineResult--;
@@ -48,6 +47,25 @@ export class Haiku{
           else {
             k+=1;
           }
+        }
+      }
+    }
+  }
+
+  containsY(line){
+    for ( let i = 0; i < line.length; i++) {
+      let k=0;
+      while(k < line[i].length){
+        if ((this.line[i].endsWith("y")) && (!this.letters.vowels.includes(line[i][k-1]))){
+          this.lineResult ++
+        }
+        if ((this.letters.y.includes(line[i][0])) && (!this.letters.vowels.includes(line[i][k+1]))) {
+          this.lineResult++;
+          k+=1;
+        } else if ((this.letters.y.includes(line[i])))
+
+        else {
+          k+=1;
         }
       }
     }

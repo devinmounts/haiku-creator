@@ -36,4 +36,11 @@ describe('Haiku', function() {
     reusableHaiku.phthongCheck(reusableHaiku.line2);
     expect(reusableHaiku.lineResult).toEqual(6);
   });
+
+  it('should test endswithY() method updates lineResult for words ending in y', function() {
+    reusableHaiku.vowelsCounter(reusableHaiku.line2);
+    reusableHaiku.endswithE(reusableHaiku.line2);
+    reusableHaiku.phthongCheck(reusableHaiku.line2);
+    expect(reusableHaiku.lineResult).toEqual(6);
+  });
 });
